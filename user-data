@@ -3,6 +3,7 @@ password: Passw0rd
 chpasswd: { expire: False }
 ssh_pwauth: False
 ssh_authorized_keys:
-  - ssh-rsa XXXXXXXX
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDbf81qotwu8uwbBkdU3DDU7+XLBPVOh9MAj+qO40MAl4xaNC5OGjPU16sEiA8oI1+LXlejXR/RdCcach8k4u7Xsd2tHmGWZtclr6rnLTJWK8L/zSPg4Dy4vqP36eoy1UDVXSsYSSLt6MlsKG1AIf1OTNScgXEhEpWzqzuctDuVZDu8/RWo1sRQegat5NrNUsJKmMUESiQ5nrYrkeDZGLWnI+iC7cwVINBf6lvhkWmPzP1Asi+H36SQWSsiDJGZQIAPZGMrDkYnrLAEGJbR6IFVrEGLdeNQaBOWHeckyqVgMmzp5UtJYu0v5tQPqIaW3CzlHiBYZAOOh07l0ze+5UDJ nobody@example.com
+timezone: Asia/Singapore
 users:
   - default
