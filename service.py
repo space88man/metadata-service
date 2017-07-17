@@ -65,6 +65,11 @@ class Ec2MetaDataRoot:
         else:
             resp.status = HTTP_404
 
+def user_data_render(my_key):
+
+    template = Template ( open( INSTANCES[my_key]['user_data_tmpl'] ).read() )
+    return template.render(  INSTANCES[my_key] )
+
 class UserData:
     def on_get(self, req, resp):
         """Handles GET requests"""
@@ -72,8 +77,7 @@ class UserData:
         my_key = req.access_route[0]
         if my_key in INSTANCES:
             print("<7>", my_key, INSTANCES[my_key])
-            user_data = USER_DATA
-            resp.body = user_data
+            resp.body = user_data_render(my_key)
         else:
             resp.status = HTTP_404
 

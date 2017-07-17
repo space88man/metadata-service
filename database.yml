@@ -5,18 +5,22 @@ instances:
     local_hostname: cloud-5aef
     ip_address: 192.168.125.150
     if_name: eth0
+    user_data_tmpl: centos_user.yml
   192.168.125.151:
     instance_id: iid-416e16f431a4e1d2
     local_hostname: cloud-e1d2
     ip_address: 192.168.125.151
     if_name: ens3
+    user_data_tmpl: ubuntu_user.yml
   192.168.125.200:
     instance_id: iid-e08cd154ca7a9491
     local_hostname: cloud-9491
     ip_address: 192.168.125.200
     if_name: eth0
+    user_data_tmpl: centos_user.yml
   192.168.125.201:
     instance_id: iid-95a39c8bdca53915
     local_hostname: cloud-3915
     ip_address: 192.168.125.201
     if_name: eth0
+    user_data_tmpl: centos_user.yml

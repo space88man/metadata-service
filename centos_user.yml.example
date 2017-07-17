@@ -1,0 +1,9 @@
+#cloud-config
+password: Passw0rd
+chpasswd: { expire: False }
+ssh_pwauth: False
+ssh_authorized_keys:
+  - ssh-rsa XXXX nobody@example.com
+timezone: Asia/Singapore
+users:
+  - default

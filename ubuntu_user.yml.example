@@ -1,0 +1,20 @@
+#cloud-config
+password: Passw0rd
+chpasswd: { expire: False }
+ssh_pwauth: False
+ssh_authorized_keys:
+  - ssh-rsa XXXX nobody@example.com
+timezone: Asia/Singapore
+users:
+  - default
+apt:
+  preserve_sources_list: false
+  primary:
+  - arches: [default]
+    uri: http://us.archive.ubuntu.com/ubuntu
+apt_proxy: http://10.12.0.23:8081/
+packages:
+  - pdsh
+runcmd:
+  - 'sed -i "/{{ local_hostname }}/d" /etc/hosts'
+  - 'echo  "{{ ip_address }}    {{ local_hostname }}" | tee -a /etc/hosts'
