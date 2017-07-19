@@ -1,4 +1,5 @@
 import falcon
+from falcon import HTTP_404
 from jinja2 import Template
 import json
 import yaml
